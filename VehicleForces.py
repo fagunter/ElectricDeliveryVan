@@ -20,6 +20,7 @@ def get_gradient_resistance(M, g, alpha):
 
 
 def get_vehicle_forces(f_r, M, g, alpha, rho, A_f, C_d, V, V_w):
+    """Computes the sum of vehicle forces [N]"""
     return get_rolling_resistance(f_r, M, g, np.deg2rad(alpha)) + get_drag(rho, A_f, C_d, V, V_w) \
         + get_gradient_resistance(M, g, np.deg2rad(alpha))
 
